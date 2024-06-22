@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    double num;
+    cout << "Enter a positive number: ";
+    cin >> num;
+    if (num >= 0)
+        cout << "Square root: " << sqrt(num) << endl;
+    else
+        cout << "Number must be positive!" << endl;
+    return 0;
+}
