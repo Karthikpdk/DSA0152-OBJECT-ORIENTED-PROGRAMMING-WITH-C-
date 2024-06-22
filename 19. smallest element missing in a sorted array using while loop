@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int findSmallestMissing(int nums[], int n) {
+    int low = 0, high = n - 1;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (nums[mid] == mid) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+    return low;
+}
+int main() {
+    int nums[] = {0, 1, 2, 3, 4, 5, 6}; // Example sorted array
+    int n = sizeof(nums) / sizeof(nums[0]);
+    cout << "Smallest missing element: " << findSmallestMissing(nums, n) << endl;
+    return 0;
+}
