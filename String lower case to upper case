@@ -1,0 +1,9 @@
+#include<string>
+#include<algorithm>
+using namespace std;
+int main(){
+	string line="good morning";
+	transform(line.begin(),line.end(),line.begin(),::toupper);
+	cout<<"string in uppercase:"<<line<<endl;
+	return 0;
+}
